@@ -2,9 +2,21 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
 
+    // Constantes
+    val ENTERO_CONSTANTE : Int = 5
 
+    // Tipos básicos variables
+    var entero : Int = 7 // Int
+    var string : String = "Hola" // String
+    var float : Float = 5.0f // Float
+    var long : Long = 1000L // Long
 
-    // List
+    println("Número entero: ${entero}")
+    println("Cadena: ${string}")
+    println("Número flotante: ${float}")
+    println("Número grande: ${long}")
+
+    // Collections
     val readOnlyShapes = listOf("triangle", "square", "circle")
     println(readOnlyShapes)
 
