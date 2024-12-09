@@ -94,4 +94,12 @@ fun main() {
         println(shapes[numero])
         numero++
     }
+    // Mapas
+    val map = mapOf(1 to "uno", 2 to "dos" , 3 to "tres", 4 to "cuatro")
+
+    println("Entradas : "+map)
+
+    println("Claves: "+map.keys )
+
+    println("Valores: "+map.values )
 }
