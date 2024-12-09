@@ -16,11 +16,11 @@ fun main() {
     println("Número flotante: ${float}")
     println("Número grande: ${long}")
 
-    // Collections
+    // Colecciones
     val readOnlyShapes = listOf("triangle", "square", "circle")
     println(readOnlyShapes)
 
-// Mutable list with explicit type declaration
+// Lista mutable con declaración de tipo explícita
     val shapes: MutableList<String> = mutableListOf("triangle", "square", "circle")
     println(shapes)
     shapes.add(3,"2")
@@ -34,4 +34,64 @@ fun main() {
     shapes2d2.add(listOf("triangle2", "square2", "circle2"))
 
     println(shapes2d2)
+
+    // Condiciones
+
+    var cadena: String = "abc"
+
+    if (cadena == "abc") {
+        println("Correcto")
+    }else{
+        println("Incorrecto")
+    }
+
+    // When
+    val x = 2
+    when (x) {
+        1 -> print("x es igual a 1")
+        2 -> print("x es igual a 2")
+        else -> print("x no es ni 1 ni 2")
+    }
+
+    //NullSafety
+    var s: String? = "prueba"
+    println(s)
+    if (s != null) {
+        println("Logintud de la cadena ${s.length}")
+    } else {
+        println("Cadena nula")
+    }
+    // Aquí le asignamos null
+    s = null
+    println(s)
+    if (s != null) {
+        println("Logintud de la cadena ${s.length}")
+    } else {
+        println("Cadena nula")
+    }
+
+    // Dataclass
+    data class Person(val name: String) {
+        var age: Int = 0
+    }
+    val person1 = Person("Iballa")
+    val person2 = Person("Iballa")
+    person1.age = 20
+    person2.age = 23
+
+    println("person1 == person2?: ${person1 == person2}")
+
+    // For loop
+    println("For loop")
+    for (numero in shapes) {
+        println(numero)
+    }
+
+    // While loop
+    println("While loop")
+    var numero = 0
+    while (numero < shapes.count()) {
+        println(shapes[numero])
+        numero++
+    }
 }
